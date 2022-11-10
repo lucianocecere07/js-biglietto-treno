@@ -9,7 +9,6 @@ let scontoOver = prezzo * 40 / 100;
 
 let decimali = 0;
 
-
 if (eta < 18) {
     let minore = prezzo - scontoMinore;
     decimali = minore.toFixed(2);
@@ -17,7 +16,7 @@ if (eta < 18) {
     over = prezzo - scontoOver;
     decimali = over.toFixed(2);
 } else {
-    decimali = (prezzoDecimali - 0).toFixed(2);
+    decimali = prezzoDecimali;
 }
 
 console.log(
