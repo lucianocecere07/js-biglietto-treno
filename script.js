@@ -6,11 +6,6 @@ let prezzo = km * 0.21
 let scontoMinore = prezzo * 20 / 100
 let scontoOver = prezzo * 40 / 100
 
-/*
-let minore = prezzo - scontoMinore
-let over = prezzo - scontoOver
-*/
-
 console.log(
     `
     ------Dati del passeggero------
@@ -22,7 +17,6 @@ console.log(
     `
 );
 
-
 if(eta < 18){
     minore = prezzo - scontoMinore
     console.log ("Prezzo con sconto minorenne: " + minore + " €");
@@ -32,10 +26,3 @@ if(eta < 18){
 } else{
     console.log ("Prezzo totale: " + prezzo + " €");
 }
-
-
-
-/*
-Minorenne: ${minore}
-Over 65: ${over}
-*/
