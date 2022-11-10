@@ -2,6 +2,7 @@ let km = prompt("Inserire quanti chilometri da percorrere");
 let eta = prompt("Inserire età del passeggero");
 
 let prezzo = km * 0.21
+let prezzoDecimali = prezzo.toFixed(2)
 
 let scontoMinore = prezzo * 20 / 100
 let scontoOver = prezzo * 40 / 100
@@ -12,17 +13,19 @@ console.log(
         Chilometri da percorrere: ${km}
         Età del passeggero: ${eta}
     ------Prezzo pieno------
-        Prezzo pieno: ${prezzo}
-    ------Prezzo Scontato (dove disponibile)------
+        Prezzo pieno: ${prezzoDecimali} €
+    ------Totale (con sconto dove disponibile)------
     `
 );
 
 if(eta < 18){
     minore = prezzo - scontoMinore
-    console.log ("Prezzo con sconto minorenne: " + minore + " €");
+    minoreDecimali = minore.toFixed(2)
+    console.log ("Totale (sconto minorenne): " + minoreDecimali + " €");
 } else if(eta >= 65){
     over = prezzo - scontoOver
-    console.log ("Prezzo con sconto over 65: " + over + " €");
+    overDecimali = over.toFixed(2)
+    console.log ("Totale (sconto over 65): " + overDecimali + " €");
 } else{
-    console.log ("Prezzo totale: " + prezzo + " €");
+    console.log ("Totale: " + prezzoDecimali + " €");
 }
