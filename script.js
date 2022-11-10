@@ -1,31 +1,33 @@
-let Km = prompt("Inserire quanti chilometri da percorrere");
-let Eta = prompt("Inserire età del passeggero");
+let km = prompt("Inserire quanti chilometri da percorrere");
+let eta = prompt("Inserire età del passeggero");
 
-let Prezzo = Km * 0.21;
-let PrezzoDecimali = Prezzo.toFixed(2);
+let prezzo = km * 0.21;
+let prezzoDecimali = prezzo.toFixed(2);
 
-let ScontoMinore = Prezzo * 20 / 100;
-let ScontoOver = Prezzo * 40 / 100;
+let scontoMinore = prezzo * 20 / 100;
+let scontoOver = prezzo * 40 / 100;
+
+let decimali = 0;
 
 
-if (Eta < 18) {
-    let Minore = Prezzo - ScontoMinore;
-    let Decimali = Minore.toFixed(2);
-} else if (Eta >= 65) {
-    let Over = Prezzo - ScontoOver;
-    let Decimali = Over.toFixed(2);
+if (eta < 18) {
+    let minore = prezzo - scontoMinore;
+    decimali = minore.toFixed(2);
+} else if (eta >= 65) {
+    over = prezzo - scontoOver;
+    decimali = over.toFixed(2);
 } else {
-    let Decimali = (PrezzoDecimali).toFixed(2);
+    decimali = (prezzoDecimali - 0).toFixed(2);
 }
 
 console.log(
     `
     ------Dati del passeggero------
-        Chilometri del percorso: ${Km}
-        Età del passeggero: ${Eta}
+        Chilometri del percorso: ${km}
+        Età del passeggero: ${eta}
     ------Prezzo del biglietto------
-        Prezzo pieno: ${PrezzoDecimali} €
+        Prezzo pieno: ${prezzoDecimali} €
     ------Totale (con sconto dove disponibile)------
-        Totale (con sconto): ${Decimali} €
+        Totale (con sconto): ${decimali} €
     `
 );
