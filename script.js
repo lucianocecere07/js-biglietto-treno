@@ -6,9 +6,18 @@ let prezzo = km * 0.21
 let scontoMinore = prezzo * 20 / 100
 let scontoOver = prezzo * 40 / 100
 
+/*
 let minore = prezzo - scontoMinore
 let over = prezzo - scontoOver
+*/
 
+if(eta < 18){
+    minore = prezzo - scontoMinore
+} else if(eta >= 65){
+    over = prezzo - scontoOver
+} else{
+    prezzo
+}
 
 
 
