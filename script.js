@@ -10,9 +10,9 @@ let scontoOver = prezzo * 40 / 100
 console.log(
     `
     ------Dati del passeggero------
-        Chilometri da percorrere: ${km}
+        Chilometri del percorso: ${km}
         Età del passeggero: ${eta}
-    ------Prezzo pieno------
+    ------Prezzo del biglietto------
         Prezzo pieno: ${prezzoDecimali} €
     ------Totale (con sconto dove disponibile)------
     `
